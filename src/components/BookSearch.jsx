@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 
 function BookSearch({ setSearchTerm }) {
@@ -17,12 +18,12 @@ function BookSearch({ setSearchTerm }) {
   }
 
   return (
-    <form className="border border-warning" onSubmit={handleSubmit}>
-      <label>
-        Enter search term:
-        <input type="text" onChange={handleChange} value={searchInput} />
+    <form onSubmit={handleSubmit}>
+      <label id="search-label">
+        Search Book Library:
+        <input type="text" onChange={handleChange} value={searchInput} id="input" placeholder="type in key word"/>
       </label>
-      <Button variant="outline-info" type="submit">Search</Button>
+      <Button variant="light" type="submit" id="search-button"><span className="button-text">Search</span></Button>
     </form>
   );
 }

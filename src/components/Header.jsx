@@ -1,6 +1,6 @@
 function Header({ searchTerm }) {
   return (
-    <div className="border border-danger">
+    <div className="header">
       <h1>Book Library</h1>
       <p>Viewing books on {searchTerm}</p>
     </div>

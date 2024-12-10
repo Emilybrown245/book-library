@@ -46,8 +46,8 @@ function BookList({ searchTerm }) {
   //   }, [searchTerm]);
 
   return (
-    <div className="border border-success">
-      <h2>Book List:</h2>
+    <div>
+      <h2 className="sub-header">Book List:</h2>
       {isLoading ? (
         <p>Your Books are Loading...</p>
       ) : error ? (

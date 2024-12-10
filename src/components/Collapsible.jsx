@@ -10,9 +10,9 @@ function Collapsible({ children, contentDescriptor }) {
 
   return (
     <div>
-     <Button variant="outline-info" onClick={toggleIsHidden}>{`${
-        isHidden ? "Show" : "Hide"
-      } ${contentDescriptor}`}</Button>
+     <Button variant="light" onClick={toggleIsHidden}>{
+        isHidden ? (<span className="button-text">Show</span>) : (<span className="button-text">Hide</span>)
+      } <span className="button-text">{contentDescriptor}</span></Button>
       {isHidden ? null : children}
     </div>
   );

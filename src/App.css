@@ -43,4 +43,74 @@
 
 .book-card-list {
   list-style-type: none;
+  margin-right: 50px;
 }
+
+#input {
+background-color: #FFFF;
+border: 2px solid #B4436C;
+color: #B4436C;
+margin-left: 5px;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  margin-right: 35px;
+}
+.app {
+  background-color: #EDC7CF;
+  border: 2px solid #B4436C;
+}
+
+.header {
+  color: #B4436C;
+  font-family: "Parkinsans";
+  margin-top: 15px;
+}
+
+.sub-header{
+  color: #B4436C;
+  font-family: "Parkinsans";
+  margin-top: 20px;
+}
+.button-text {
+  color: #B4436C;
+  font-family: "Parkinsans";
+}
+
+#search-label {
+  margin: 15px 15px 15px 10px;
+  color: #B4436C;
+  font-family: "Parkinsans";
+}
+
+#search-button {
+  margin-bottom: 2px;
+  font-family: "Parkinsans";
+  margin-right: 10px;
+}
+.card-text {
+  color: #B4436C !important;
+  font-family: "Parkinsans" !important;
+}
+.book-card {
+  border: 2px solid #B4436C !important;
+  
+}
+
+.book-card:hover{
+  background-color: #B4436C;
+}
+
+.book-card:hover .card-text span{
+  background-color: #B4436C;
+  color: #FFFF;
+}
+
+.book-card:hover .card-text p{
+  background-color: #B4436C;
+  color: #FFFF;
+}
+
+

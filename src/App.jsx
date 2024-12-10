@@ -10,7 +10,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("Cats");
 
   return (
-    <div>
+    <div className="app">
       <Header searchTerm={searchTerm} />
       <Collapsible contentDescriptor={"search"}>
         <BookSearch setSearchTerm={setSearchTerm} />
