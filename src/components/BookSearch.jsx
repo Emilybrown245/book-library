@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
+
 
 function BookSearch({ setSearchTerm }) {
   const [searchInput, setSearchInput] = useState("");
@@ -8,7 +10,7 @@ function BookSearch({ setSearchTerm }) {
   }
 
   function handleSubmit(e) {
-    console.log("The Form has been submitted!");
+
     e.preventDefault();
     setSearchTerm(searchInput);
     setSearchInput("");
@@ -20,7 +22,7 @@ function BookSearch({ setSearchTerm }) {
         Enter search term:
         <input type="text" onChange={handleChange} value={searchInput} />
       </label>
-      <button type="submit">Search</button>
+      <Button variant="outline-info" type="submit">Search</Button>
     </form>
   );
 }

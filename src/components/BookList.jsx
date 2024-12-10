@@ -7,21 +7,26 @@ function BookList({ searchTerm }) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  function getBooks() {
-    setIsLoading(true);
-    return axios
-      .get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`)
-      .then(({ data }) => {
-        setIsLoading(false);
-        setBooks(data);
-      })
-      .catch((err) => {
-        setIsLoading(false);
-        setError(true);
-      });
-  }
 
-  getBooks();
+ useEffect(() => {
+  const getBooks = async () => {
+    setIsLoading(true)   
+    setError(false);
+    try {
+     const response = await axios
+      .get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`)
+       setBooks(response.data.items);
+    }
+      catch(e) {
+        setError(true);
+        console.log(e);
+    }
+    finally {
+      setIsLoading(false);
+    }
+  }
+   getBooks();
+ }, [searchTerm])
 
   //   useEffect(() => {
   //     setIsLoading(true);
@@ -32,6 +37,7 @@ function BookList({ searchTerm }) {
   // .then(({items}) => {
   //   setIsLoading(false);
   // setBooks(items)
+  // console.log(items)
   // })
   // .catch((err) => {
   //   setIsLoading(false)
@@ -57,4 +63,4 @@ function BookList({ searchTerm }) {
   );
 }
 
-export default BookList;
+export default BookList

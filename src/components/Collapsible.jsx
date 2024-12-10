@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 function Collapsible({ children, contentDescriptor }) {
   const [isHidden, setIsHidden] = useState(false);
@@ -9,9 +10,9 @@ function Collapsible({ children, contentDescriptor }) {
 
   return (
     <div>
-      <button onClick={toggleIsHidden}>{`${
+     <Button variant="outline-info" onClick={toggleIsHidden}>{`${
         isHidden ? "Show" : "Hide"
-      } ${contentDescriptor}`}</button>
+      } ${contentDescriptor}`}</Button>
       {isHidden ? null : children}
     </div>
   );
